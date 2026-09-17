@@ -6,7 +6,7 @@
 
 A portfolio demonstration showing how structured data, transparent rules and AI-assisted review could support a UK motor finance commission remediation programme.
 
-**[Open the interactive dashboard](https://gurj86.github.io/motor-finance-redress-dashboard/)**
+**[Motor Finance Redress Live interactive dashboard](https://gurj86.github.io/motor-finance-redress-dashboard/)**
 
 > All agreements, customers, firms and monetary figures are fictional. The calculator is illustrative and must not be used for real compensation decisions.
 
