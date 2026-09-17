@@ -1,0 +1,509 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Motor Finance Redress Dashboard</title>
+    <style>
+    :root{--ink:#172033;--muted:#667085;--line:#e4e7ec;--bg:#f3f6fb;--navy:#14213d}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,system-ui,sans-serif}header{background:linear-gradient(125deg,#101c35,#28447e);color:#fff;padding:34px max(24px,calc((100vw - 1180px)/2)) 54px}header p{color:#d8e2ff;max-width:820px}h1{margin:0;font-size:clamp(28px,4vw,42px);letter-spacing:-.03em}.eyebrow{color:#b9c7fb;font-size:12px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}main{max-width:1180px;margin:-26px auto 48px;padding:0 22px}.notice{background:#fff5dc;border:1px solid #f2ce75;border-radius:12px;padding:13px 16px;margin-bottom:16px;color:#6b4f00}.metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.card,.panel{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 8px 25px rgba(16,24,40,.05)}.card{padding:18px}.card span{display:block;color:var(--muted);font-size:11px;font-weight:800;text-transform:uppercase}.card strong{font-size:29px;display:block;margin-top:7px}.card em{font-size:12px;color:var(--muted);font-style:normal}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}.panel{padding:22px}.panel h2{font-size:18px;margin:0 0 16px}.bar-row{margin:13px 0}.bar-label{display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px}.bar-track{height:8px;background:#edf0f5;border-radius:9px;overflow:hidden}.bar-fill{height:100%;border-radius:9px}.table-panel{margin-top:16px;overflow:hidden}.actions{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:13px}button{border:1px solid #cfd5e1;background:#fff;padding:8px 12px;border-radius:999px;font-weight:700;cursor:pointer}button.active{background:var(--navy);color:#fff}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:950px}th{text-align:left;color:var(--muted);font-size:11px;text-transform:uppercase;padding:10px;border-bottom:1px solid var(--line)}td{padding:12px 10px;border-bottom:1px solid #edf0f4;vertical-align:top}td small{display:block;color:var(--muted)}.pill,.priority{display:inline-block;padding:4px 8px;border-radius:999px;font-size:11px;font-weight:800}.pill{background:#edf4ff;color:#1849a9}.urgent{background:#feeceb;color:#b42318}.priority{background:#fff5dc;color:#8a5b00}.standard{background:#e8f7ef;color:#16794b}footer{text-align:center;color:var(--muted);font-size:13px;padding:5px 20px 40px}@media(max-width:850px){.metrics{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}}@media(max-width:480px){.metrics{grid-template-columns:1fr}}
+    </style></head><body><header><div class="eyebrow">Motor finance • Remediation readiness</div><h1>Commission Redress Dashboard</h1><p>Portfolio view of 100 fictional agreements, combining evidence gathering, scope indicators, illustrative redress scenarios and accountable human review.</p></header><main>
+    <div class="notice"><strong>Regulatory status:</strong> parts of the FCA scheme are suspended during legal challenges. All figures are fictional and illustrative; no payment decision should be based on this dashboard.</div>
+    <section class="metrics"><div class="card"><span>Agreements</span><strong>100</strong><em>fictional records</em></div><div class="card"><span>Indicative eligible</span><strong>24</strong><em>human validation required</em></div><div class="card"><span>Illustrative redress</span><strong>£18,689</strong><em>not for payment</em></div><div class="card"><span>Average scenario</span><strong>£779</strong><em>eligible indicators only</em></div><div class="card"><span>Evidence gaps</span><strong>14</strong><em>investigation required</em></div></section>
+    <section class="grid"><div class="panel"><h2>Indicative review status</h2><div class="bar-row"><div class="bar-label"><span>Indicatively eligible</span><strong>24</strong></div><div class="bar-track"><div class="bar-fill" style="width:24.0%;background:#16794b"></div></div></div><div class="bar-row"><div class="bar-label"><span>Further investigation</span><strong>9</strong></div><div class="bar-track"><div class="bar-fill" style="width:9.0%;background:#d18a00"></div></div></div><div class="bar-row"><div class="bar-label"><span>Excluded / no redress</span><strong>67</strong></div><div class="bar-track"><div class="bar-fill" style="width:67.0%;background:#b42318"></div></div></div></div><div class="panel"><h2>Commission arrangement recorded</h2><div class="bar-row"><div class="bar-label"><span>No flagged arrangement</span><strong>25</strong></div><div class="bar-track"><div class="bar-fill" style="width:25.0%;background:#4f46e5"></div></div></div><div class="bar-row"><div class="bar-label"><span>Contractual tie</span><strong>25</strong></div><div class="bar-track"><div class="bar-fill" style="width:25.0%;background:#4f46e5"></div></div></div><div class="bar-row"><div class="bar-label"><span>High commission</span><strong>25</strong></div><div class="bar-track"><div class="bar-fill" style="width:25.0%;background:#4f46e5"></div></div></div><div class="bar-row"><div class="bar-label"><span>DCA</span><strong>25</strong></div><div class="bar-track"><div class="bar-fill" style="width:25.0%;background:#4f46e5"></div></div></div></div><div class="panel"><h2>Operational readiness</h2><ul><li>20 urgent human reviews</li><li>42 complaints aged over 180 days</li><li>16 vulnerability indicators</li><li>Revalidate calculations after legal challenge</li></ul></div><div class="panel"><h2>Calculation control</h2><p>The scenario uses a simplified hybrid calculation and visible caps based on high-level FCA consumer guidance. It deliberately prevents payment instructions and requires source evidence, QA and approval.</p></div></section>
+    <section class="panel table-panel"><h2>Human-review queue</h2><div class="actions"><button class="active" data-filter="All">All</button><button data-filter="Urgent">Urgent</button><button data-filter="Indicatively eligible">Indicatively eligible</button><button data-filter="Further investigation">Further investigation</button></div><div class="table-wrap"><table><thead><tr><th>Case</th><th>Indicative status</th><th>Priority</th><th>Arrangement</th><th>Commission</th><th>Illustrative redress</th><th>Evidence gaps</th></tr></thead><tbody><tr data-status="Indicatively eligible" data-priority="Urgent">
+        <td><strong>MF-054</strong><small>Hire Purchase • 2017</small></td>
+        <td><span class="pill">Indicatively eligible</span></td>
+        <td><span class="priority urgent">Urgent</span></td>
+        <td>Contractual tie</td><td>£1,222</td>
+        <td>£936</td><td>None identified</td></tr><tr data-status="Indicatively eligible" data-priority="Urgent">
+        <td><strong>MF-051</strong><small>Conditional Sale • 2016</small></td>
+        <td><span class="pill">Indicatively eligible</span></td>
+        <td><span class="priority urgent">Urgent</span></td>
+        <td>High commission</td><td>£1,147</td>
+        <td>£913</td><td>None identified</td></tr><tr data-status="Indicatively eligible" data-priority="Urgent">
+        <td><strong>MF-027</strong><small>Conditional Sale • 2012</small></td>
+        <td><span class="pill">Indicatively eligible</span></td>
+        <td><span class="priority urgent">Urgent</span></td>
+        <td>High commission</td><td>£905</td>
+        <td>£816</td><td>None identified</td></tr><tr data-status="Indicatively eligible" data-priority="Urgent">
+        <td><strong>MF-018</strong><small>Hire Purchase • 2010</small></td>
+        <td><span class="pill">Indicatively eligible</span></td>
+        <td><span class="priority urgent">Urgent</span></td>
+        <td>Contractual tie</td><td>£874</td>
+        <td>£802</td><td>None identified</td></tr><tr data-status="Indicatively eligible" data-priority="Urgent">
+        <td><strong>MF-046</strong><small>Hire Purchase • 2015</small></td>
+        <td><span class="pill">Indicatively eligible</span></td>
+        <td><span class="priority urgent">Urgent</span></td>
+        <td>Contractual tie</td><td>£878</td>
+        <td>£706</td><td>None identified</td></tr><tr data-status="Indicatively eligible" data-priority="Urgent">
+        <td><strong>MF-023</strong><small>Conditional Sale • 2011</small></td>
+        <td><span class="pill">Indicatively eligible</span></td>
+        <td><span class="priority urgent">Urgent</span></td>
+        <td>High commission</td><td>£608</td>
+        <td>£622</td><td>None identified</td></tr><tr data-status="Indicatively eligible" data-priority="Urgent">
+        <td><strong>MF-063</strong><small>Conditional Sale • 2018</small></td>
+        <td><span class="pill">Indicatively eligible</span></td>
+        <td><span class="priority urgent">Urgent</span></td>
+        <td>High commission</td><td>£498</td>
+        <td>£430</td><td>None identified</td></tr><tr data-status="Indicatively eligible" data-priority="Urgent">
+        <td><strong>MF-034</strong><small>Hire Purchase • 2013</small></td>
+        <td><span class="pill">Indicatively eligible</span></td>
+        <td><span class="priority urgent">Urgent</span></td>
+        <td>Contractual tie</td><td>£362</td>
+        <td>£362</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Urgent">
+        <td><strong>MF-009</strong><small>PCP • 2008</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority urgent">Urgent</span></td>
+        <td>No flagged arrangement</td><td>£487</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Urgent">
+        <td><strong>MF-017</strong><small>PCP • 2010</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority urgent">Urgent</span></td>
+        <td>No flagged arrangement</td><td>£831</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Urgent">
+        <td><strong>MF-036</strong><small>PCH • 2013</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority urgent">Urgent</span></td>
+        <td>DCA</td><td>£448</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Urgent">
+        <td><strong>MF-045</strong><small>PCP • 2015</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority urgent">Urgent</span></td>
+        <td>No flagged arrangement</td><td>£835</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Urgent">
+        <td><strong>MF-068</strong><small>PCH • 2019</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority urgent">Urgent</span></td>
+        <td>DCA</td><td>£624</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Urgent">
+        <td><strong>MF-069</strong><small>PCP • 2019</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority urgent">Urgent</span></td>
+        <td>No flagged arrangement</td><td>£667</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Urgent">
+        <td><strong>MF-072</strong><small>PCH • 2020</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority urgent">Urgent</span></td>
+        <td>DCA</td><td>£796</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Urgent">
+        <td><strong>MF-081</strong><small>PCP • 2022</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority urgent">Urgent</span></td>
+        <td>No flagged arrangement</td><td>£1,183</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Urgent">
+        <td><strong>MF-085</strong><small>PCP • 2022</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority urgent">Urgent</span></td>
+        <td>No flagged arrangement</td><td>£155</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Urgent">
+        <td><strong>MF-090</strong><small>Hire Purchase • 2023</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority urgent">Urgent</span></td>
+        <td>Contractual tie</td><td>£370</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Urgent">
+        <td><strong>MF-092</strong><small>PCH • 2024</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority urgent">Urgent</span></td>
+        <td>DCA</td><td>£456</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Further investigation" data-priority="Urgent">
+        <td><strong>MF-099</strong><small>Conditional Sale • 2007</small></td>
+        <td><span class="pill">Further investigation</span></td>
+        <td><span class="priority urgent">Urgent</span></td>
+        <td>High commission</td><td>£1,631</td>
+        <td>£0</td><td>Key agreement or commission evidence missing</td></tr><tr data-status="Indicatively eligible" data-priority="Priority">
+        <td><strong>MF-079</strong><small>Conditional Sale • 2021</small></td>
+        <td><span class="pill">Indicatively eligible</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>High commission</td><td>£1,686</td>
+        <td>£1,663</td><td>None identified</td></tr><tr data-status="Indicatively eligible" data-priority="Priority">
+        <td><strong>MF-098</strong><small>Hire Purchase • 2007</small></td>
+        <td><span class="pill">Indicatively eligible</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>Contractual tie</td><td>£714</td>
+        <td>£872</td><td>None identified</td></tr><tr data-status="Indicatively eligible" data-priority="Priority">
+        <td><strong>MF-014</strong><small>Hire Purchase • 2009</small></td>
+        <td><span class="pill">Indicatively eligible</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>Contractual tie</td><td>£702</td>
+        <td>£852</td><td>None identified</td></tr><tr data-status="Indicatively eligible" data-priority="Priority">
+        <td><strong>MF-047</strong><small>Conditional Sale • 2015</small></td>
+        <td><span class="pill">Indicatively eligible</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>High commission</td><td>£850</td>
+        <td>£758</td><td>None identified</td></tr><tr data-status="Indicatively eligible" data-priority="Priority">
+        <td><strong>MF-083</strong><small>Conditional Sale • 2022</small></td>
+        <td><span class="pill">Indicatively eligible</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>High commission</td><td>£443</td>
+        <td>£398</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Priority">
+        <td><strong>MF-010</strong><small>Hire Purchase • 2009</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>Contractual tie</td><td>£530</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Further investigation" data-priority="Priority">
+        <td><strong>MF-011</strong><small>Conditional Sale • 2009</small></td>
+        <td><span class="pill">Further investigation</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>High commission</td><td>£1,257</td>
+        <td>£0</td><td>Key agreement or commission evidence missing</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Priority">
+        <td><strong>MF-012</strong><small>PCH • 2009</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>DCA</td><td>£616</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Priority">
+        <td><strong>MF-013</strong><small>PCP • 2009</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>No flagged arrangement</td><td>£659</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Priority">
+        <td><strong>MF-015</strong><small>Conditional Sale • 2010</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>High commission</td><td>£1,554</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Priority">
+        <td><strong>MF-016</strong><small>PCH • 2010</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>DCA</td><td>£788</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Further investigation" data-priority="Priority">
+        <td><strong>MF-019</strong><small>Conditional Sale • 2010</small></td>
+        <td><span class="pill">Further investigation</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>High commission</td><td>£1,851</td>
+        <td>£0</td><td>Multiple representatives require resolution</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Priority">
+        <td><strong>MF-028</strong><small>PCH • 2012</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>DCA</td><td>£104</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Priority">
+        <td><strong>MF-029</strong><small>PCP • 2012</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>No flagged arrangement</td><td>£147</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Priority">
+        <td><strong>MF-030</strong><small>Hire Purchase • 2012</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>Contractual tie</td><td>£190</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Priority">
+        <td><strong>MF-031</strong><small>Conditional Sale • 2012</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>High commission</td><td>£1,202</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Priority">
+        <td><strong>MF-032</strong><small>PCH • 2013</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>DCA</td><td>£276</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Further investigation" data-priority="Priority">
+        <td><strong>MF-033</strong><small>PCP • 2013</small></td>
+        <td><span class="pill">Further investigation</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>No flagged arrangement</td><td>£319</td>
+        <td>£0</td><td>Key agreement or commission evidence missing</td></tr><tr data-status="Further investigation" data-priority="Priority">
+        <td><strong>MF-038</strong><small>Hire Purchase • 2014</small></td>
+        <td><span class="pill">Further investigation</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>Contractual tie</td><td>£534</td>
+        <td>£0</td><td>Multiple representatives require resolution</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Priority">
+        <td><strong>MF-048</strong><small>PCH • 2016</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>DCA</td><td>£964</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Priority">
+        <td><strong>MF-049</strong><small>PCP • 2016</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>No flagged arrangement</td><td>£1,007</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Priority">
+        <td><strong>MF-050</strong><small>Hire Purchase • 2016</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>Contractual tie</td><td>£1,050</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Further investigation" data-priority="Priority">
+        <td><strong>MF-055</strong><small>Conditional Sale • 2017</small></td>
+        <td><span class="pill">Further investigation</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>High commission</td><td>£1,444</td>
+        <td>£0</td><td>Key agreement or commission evidence missing</td></tr><tr data-status="Further investigation" data-priority="Priority">
+        <td><strong>MF-057</strong><small>PCP • 2017</small></td>
+        <td><span class="pill">Further investigation</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>No flagged arrangement</td><td>£151</td>
+        <td>£0</td><td>Multiple representatives require resolution</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Priority">
+        <td><strong>MF-062</strong><small>Hire Purchase • 2018</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>Contractual tie</td><td>£366</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Priority">
+        <td><strong>MF-064</strong><small>PCH • 2019</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>DCA</td><td>£452</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Priority">
+        <td><strong>MF-065</strong><small>PCP • 2019</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>No flagged arrangement</td><td>£495</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Priority">
+        <td><strong>MF-066</strong><small>Hire Purchase • 2019</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>Contractual tie</td><td>£538</td>
+        <td>£0</td><td>Key agreement or commission evidence missing</td></tr><tr data-status="No redress indicator" data-priority="Priority">
+        <td><strong>MF-067</strong><small>Conditional Sale • 2019</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>High commission</td><td>£795</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Further investigation" data-priority="Priority">
+        <td><strong>MF-077</strong><small>PCP • 2021</small></td>
+        <td><span class="pill">Further investigation</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>No flagged arrangement</td><td>£1,011</td>
+        <td>£0</td><td>Key agreement or commission evidence missing</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Priority">
+        <td><strong>MF-080</strong><small>PCH • 2021</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>DCA</td><td>£1,140</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Priority">
+        <td><strong>MF-082</strong><small>Hire Purchase • 2022</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>Contractual tie</td><td>£1,226</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Priority">
+        <td><strong>MF-084</strong><small>PCH • 2022</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>DCA</td><td>£112</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Further investigation" data-priority="Priority">
+        <td><strong>MF-095</strong><small>Conditional Sale • 2024</small></td>
+        <td><span class="pill">Further investigation</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>High commission</td><td>£1,334</td>
+        <td>£0</td><td>Multiple representatives require resolution</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Priority">
+        <td><strong>MF-096</strong><small>PCH • 2007</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>DCA</td><td>£628</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Priority">
+        <td><strong>MF-097</strong><small>PCP • 2007</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>No flagged arrangement</td><td>£671</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Priority">
+        <td><strong>MF-100</strong><small>PCH • 2008</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority priority">Priority</span></td>
+        <td>DCA</td><td>£800</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Indicatively eligible" data-priority="Standard">
+        <td><strong>MF-059</strong><small>Conditional Sale • 2018</small></td>
+        <td><span class="pill">Indicatively eligible</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>High commission</td><td>£1,741</td>
+        <td>£1,742</td><td>None identified</td></tr><tr data-status="Indicatively eligible" data-priority="Standard">
+        <td><strong>MF-091</strong><small>Conditional Sale • 2023</small></td>
+        <td><span class="pill">Indicatively eligible</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>High commission</td><td>£1,037</td>
+        <td>£1,157</td><td>None identified</td></tr><tr data-status="Indicatively eligible" data-priority="Standard">
+        <td><strong>MF-078</strong><small>Hire Purchase • 2021</small></td>
+        <td><span class="pill">Indicatively eligible</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>Contractual tie</td><td>£1,054</td>
+        <td>£1,148</td><td>None identified</td></tr><tr data-status="Indicatively eligible" data-priority="Standard">
+        <td><strong>MF-026</strong><small>Hire Purchase • 2012</small></td>
+        <td><span class="pill">Indicatively eligible</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>Contractual tie</td><td>£1,218</td>
+        <td>£1,022</td><td>None identified</td></tr><tr data-status="Indicatively eligible" data-priority="Standard">
+        <td><strong>MF-074</strong><small>Hire Purchase • 2020</small></td>
+        <td><span class="pill">Indicatively eligible</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>Contractual tie</td><td>£882</td>
+        <td>£1,001</td><td>None identified</td></tr><tr data-status="Indicatively eligible" data-priority="Standard">
+        <td><strong>MF-042</strong><small>Hire Purchase • 2014</small></td>
+        <td><span class="pill">Indicatively eligible</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>Contractual tie</td><td>£706</td>
+        <td>£574</td><td>None identified</td></tr><tr data-status="Indicatively eligible" data-priority="Standard">
+        <td><strong>MF-043</strong><small>Conditional Sale • 2015</small></td>
+        <td><span class="pill">Indicatively eligible</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>High commission</td><td>£553</td>
+        <td>£546</td><td>None identified</td></tr><tr data-status="Indicatively eligible" data-priority="Standard">
+        <td><strong>MF-094</strong><small>Hire Purchase • 2024</small></td>
+        <td><span class="pill">Indicatively eligible</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>Contractual tie</td><td>£542</td>
+        <td>£519</td><td>None identified</td></tr><tr data-status="Indicatively eligible" data-priority="Standard">
+        <td><strong>MF-006</strong><small>Hire Purchase • 2008</small></td>
+        <td><span class="pill">Indicatively eligible</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>Contractual tie</td><td>£358</td>
+        <td>£398</td><td>None identified</td></tr><tr data-status="Indicatively eligible" data-priority="Standard">
+        <td><strong>MF-086</strong><small>Hire Purchase • 2023</small></td>
+        <td><span class="pill">Indicatively eligible</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>Contractual tie</td><td>£198</td>
+        <td>£228</td><td>None identified</td></tr><tr data-status="Indicatively eligible" data-priority="Standard">
+        <td><strong>MF-002</strong><small>Hire Purchase • 2007</small></td>
+        <td><span class="pill">Indicatively eligible</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>Contractual tie</td><td>£186</td>
+        <td>£224</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Standard">
+        <td><strong>MF-001</strong><small>PCP • 2007</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>No flagged arrangement</td><td>£143</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Standard">
+        <td><strong>MF-003</strong><small>Conditional Sale • 2007</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>High commission</td><td>£663</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Standard">
+        <td><strong>MF-004</strong><small>PCH • 2007</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>DCA</td><td>£272</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Standard">
+        <td><strong>MF-005</strong><small>PCP • 2008</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>No flagged arrangement</td><td>£315</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Standard">
+        <td><strong>MF-007</strong><small>Conditional Sale • 2008</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>High commission</td><td>£960</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Standard">
+        <td><strong>MF-008</strong><small>PCH • 2008</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>DCA</td><td>£444</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Standard">
+        <td><strong>MF-020</strong><small>PCH • 2010</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>DCA</td><td>£960</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Standard">
+        <td><strong>MF-021</strong><small>PCP • 2011</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>No flagged arrangement</td><td>£1,003</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Standard">
+        <td><strong>MF-022</strong><small>Hire Purchase • 2011</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>Contractual tie</td><td>£1,046</td>
+        <td>£0</td><td>Key agreement or commission evidence missing</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Standard">
+        <td><strong>MF-024</strong><small>PCH • 2011</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>DCA</td><td>£1,132</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Standard">
+        <td><strong>MF-025</strong><small>PCP • 2011</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>No flagged arrangement</td><td>£1,175</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Standard">
+        <td><strong>MF-035</strong><small>Conditional Sale • 2013</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>High commission</td><td>£1,499</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Standard">
+        <td><strong>MF-037</strong><small>PCP • 2014</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>No flagged arrangement</td><td>£491</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Standard">
+        <td><strong>MF-039</strong><small>Conditional Sale • 2014</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>High commission</td><td>£1,796</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Standard">
+        <td><strong>MF-040</strong><small>PCH • 2014</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>DCA</td><td>£620</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Standard">
+        <td><strong>MF-041</strong><small>PCP • 2014</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>No flagged arrangement</td><td>£663</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Standard">
+        <td><strong>MF-044</strong><small>PCH • 2015</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>DCA</td><td>£792</td>
+        <td>£0</td><td>Key agreement or commission evidence missing</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Standard">
+        <td><strong>MF-052</strong><small>PCH • 2016</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>DCA</td><td>£1,136</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Standard">
+        <td><strong>MF-053</strong><small>PCP • 2016</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>No flagged arrangement</td><td>£1,179</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Standard">
+        <td><strong>MF-056</strong><small>PCH • 2017</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>DCA</td><td>£108</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Standard">
+        <td><strong>MF-058</strong><small>Hire Purchase • 2017</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>Contractual tie</td><td>£194</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Standard">
+        <td><strong>MF-060</strong><small>PCH • 2018</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>DCA</td><td>£280</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Standard">
+        <td><strong>MF-061</strong><small>PCP • 2018</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>No flagged arrangement</td><td>£323</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Standard">
+        <td><strong>MF-070</strong><small>Hire Purchase • 2020</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>Contractual tie</td><td>£710</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Standard">
+        <td><strong>MF-071</strong><small>Conditional Sale • 2020</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>High commission</td><td>£1,092</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Standard">
+        <td><strong>MF-073</strong><small>PCP • 2020</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>No flagged arrangement</td><td>£839</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="No redress indicator" data-priority="Standard">
+        <td><strong>MF-075</strong><small>Conditional Sale • 2021</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>High commission</td><td>£1,389</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Standard">
+        <td><strong>MF-076</strong><small>PCH • 2021</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>DCA</td><td>£968</td>
+        <td>£0</td><td>Multiple representatives require resolution</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Standard">
+        <td><strong>MF-087</strong><small>Conditional Sale • 2023</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>High commission</td><td>£740</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Standard">
+        <td><strong>MF-088</strong><small>PCH • 2023</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>DCA</td><td>£284</td>
+        <td>£0</td><td>Key agreement or commission evidence missing</td></tr><tr data-status="No redress indicator" data-priority="Standard">
+        <td><strong>MF-089</strong><small>PCP • 2023</small></td>
+        <td><span class="pill">No redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>No flagged arrangement</td><td>£327</td>
+        <td>£0</td><td>None identified</td></tr><tr data-status="Excluded / no redress indicator" data-priority="Standard">
+        <td><strong>MF-093</strong><small>PCP • 2024</small></td>
+        <td><span class="pill">Excluded / no redress indicator</span></td>
+        <td><span class="priority standard">Standard</span></td>
+        <td>No flagged arrangement</td><td>£499</td>
+        <td>£0</td><td>None identified</td></tr></tbody></table></div></section></main>
+    <footer>Fictional portfolio demonstration • FCA position checked 17 September 2026 • Final decisions remain with accountable human reviewers</footer><script>const b=[...document.querySelectorAll('button[data-filter]')],r=[...document.querySelectorAll('tbody tr')];b.forEach(x=>x.addEventListener('click',()=>{b.forEach(y=>y.classList.remove('active'));x.classList.add('active');const f=x.dataset.filter;r.forEach(z=>z.style.display=f==='All'||z.dataset.status===f||z.dataset.priority===f?'':'none')}));</script></body></html>
