@@ -49,7 +49,17 @@ class MotorFinanceReviewTests(unittest.TestCase):
     def test_dashboard_control_statement(self):
         with tempfile.TemporaryDirectory() as d:
             path = Path(d) / "index.html"; build_dashboard(self.reviewed, path)
-            self.assertIn("scheme are suspended", path.read_text(encoding="utf-8"))
+            page = path.read_text(encoding="utf-8")
+            self.assertIn("not final FCA methodology", page)
+            self.assertIn("accountable human review", page)
+
+    def test_dashboard_has_executive_and_scenario_views(self):
+        with tempfile.TemporaryDirectory() as d:
+            path = Path(d) / "index.html"; build_dashboard(self.reviewed, path)
+            page = path.read_text(encoding="utf-8")
+            self.assertIn("Executive Decision &amp; Assurance Toolkit", page)
+            self.assertIn("Scenario modeller", page)
+            self.assertIn("Operations &amp; assurance", page)
 
     def test_dashboard_has_100_rows(self):
         with tempfile.TemporaryDirectory() as d:
@@ -63,4 +73,3 @@ class MotorFinanceReviewTests(unittest.TestCase):
 
 
 if __name__ == "__main__": unittest.main()
-

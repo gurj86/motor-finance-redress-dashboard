@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A fictional motor finance redress executive decision toolkit demonstrating business analysis, scenario planning, Consumer Duty oversight and human-controlled AI assurance.">
+  <title>Motor Finance Redress Executive Decision Toolkit</title>
+  <style>
+    :root{
+      --navy:#0b1736;--navy-2:#162d5e;--blue:#2563eb;--cyan:#16a3b6;--ink:#172033;
+      --muted:#667085;--line:#dfe5ee;--bg:#f3f6fb;--card:#fff;--green:#16794b;
+      --amber:#a96300;--red:#b42318;--purple:#6941c6;--shadow:0 10px 28px rgba(16,24,40,.07)
+    }
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+    button,input,select{font:inherit}button{cursor:pointer}.shell{max-width:1240px;margin:auto;padding:0 24px}
+    header{background:radial-gradient(circle at 80% 0,#274c91 0,transparent 35%),linear-gradient(125deg,var(--navy),var(--navy-2));color:#fff;padding:30px 0 54px}
+    .topline{display:flex;justify-content:space-between;align-items:center;gap:20px}.brand{font-weight:800;letter-spacing:.02em}.status-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.08);padding:7px 11px;border-radius:999px;font-size:13px}.status-dot{width:8px;height:8px;border-radius:50%;background:#67e8a5}
+    .header-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:28px;margin-top:28px}.eyebrow{color:#a9c5ff;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.header-grid h1{font-size:clamp(30px,4.5vw,50px);line-height:1.04;letter-spacing:-.04em;margin:7px 0 12px;max-width:840px}.header-grid p{color:#d8e4ff;font-size:17px;max-width:800px;margin:0}.header-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}.btn{border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);padding:10px 14px;font-weight:750}.btn:hover{border-color:#9cabbe}.btn.primary{background:#fff;color:var(--navy);border-color:#fff}.btn.secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,.38)}
+    main{margin-top:-25px;padding-bottom:48px}.notice{background:#fff7e8;border:1px solid #efcc88;border-radius:13px;padding:13px 16px;color:#6b4f00;box-shadow:var(--shadow)}
+    .tabs{display:flex;gap:6px;margin:16px 0;padding:6px;background:#e6ebf3;border:1px solid #d6deea;border-radius:13px;overflow:auto}.tab{border:0;background:transparent;color:#475467;padding:10px 15px;border-radius:9px;font-weight:750;white-space:nowrap}.tab.active{background:#fff;color:var(--navy);box-shadow:0 2px 8px rgba(16,24,40,.08)}
+    .view{display:none}.view.active{display:block}.metrics{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.card,.panel{background:var(--card);border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow)}.metric{padding:17px}.metric-label{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.04em}.metric-value{font-size:28px;font-weight:830;letter-spacing:-.03em;margin-top:7px}.metric-foot{color:var(--muted);font-size:12px;margin-top:1px}.mini-dot{width:8px;height:8px;border-radius:50%;background:var(--blue)}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:15px}.grid.wide-left{grid-template-columns:1.25fr .75fr}.grid.three{grid-template-columns:repeat(3,1fr)}.panel{padding:21px}.panel h2{font-size:18px;margin:0 0 4px;letter-spacing:-.01em}.panel h3{font-size:15px;margin:0}.sub{color:var(--muted);margin:0 0 17px;font-size:13px}.section-title{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:16px}.tag{display:inline-block;padding:4px 8px;border-radius:999px;background:#edf4ff;color:#1849a9;font-size:11px;font-weight:800}.tag.amber{background:#fff4de;color:#8a5b00}.tag.green{background:#e8f7ef;color:#16794b}
+    .brief{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.brief-item{border-left:3px solid var(--blue);padding:3px 12px}.brief-item:nth-child(2){border-color:var(--amber)}.brief-item:nth-child(3){border-color:var(--green)}.brief-item strong{display:block;margin-bottom:5px}.brief-item p{margin:0;color:#475467;font-size:13px}
+    .bar-row{margin:14px 0}.bar-label{display:flex;justify-content:space-between;gap:12px;font-size:13px;margin-bottom:6px}.bar-label span:last-child{font-weight:800}.bar-track{height:10px;background:#edf0f5;border-radius:99px;overflow:hidden}.bar-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--blue),var(--cyan));transition:width .35s ease}.bar-fill.green{background:var(--green)}.bar-fill.amber{background:#d18a00}.bar-fill.red{background:var(--red)}.bar-fill.purple{background:var(--purple)}
+    .decision-list{display:grid;gap:10px}.decision{display:grid;grid-template-columns:84px 1fr auto;align-items:center;gap:12px;border:1px solid var(--line);border-radius:11px;padding:12px}.rag{font-size:11px;font-weight:850;text-transform:uppercase;padding:4px 8px;border-radius:999px;text-align:center}.rag.red{background:#feeceb;color:var(--red)}.rag.amber{background:#fff4de;color:#8a5b00}.rag.green{background:#e8f7ef;color:var(--green)}.decision p{margin:2px 0 0;color:var(--muted);font-size:12px}.owner{font-size:12px;color:#475467;text-align:right}
+    .outcome-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.outcome{border:1px solid var(--line);border-radius:11px;padding:13px}.outcome strong{display:block;margin-bottom:4px}.outcome span{font-size:13px;color:var(--muted)}
+    .controls{display:grid;gap:16px}.control{display:grid;grid-template-columns:1fr 90px;gap:12px;align-items:center}.control label{font-weight:750}.control small{display:block;color:var(--muted);font-weight:400}.control output{font-weight:850;text-align:right;color:var(--blue)}input[type=range]{width:100%;accent-color:var(--blue);grid-column:1/-1;margin-top:-8px}
+    .scenario-results{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}.result{background:#f6f8fc;border:1px solid var(--line);border-radius:11px;padding:15px}.result span{font-size:12px;color:var(--muted);font-weight:700}.result strong{display:block;font-size:25px;margin-top:4px}.range-result{grid-column:1/-1;background:linear-gradient(120deg,#0f224a,#244a87);color:#fff;border:0}.range-result span{color:#c9d8f5}.range-result strong{font-size:30px}
+    .assumption-table{width:100%;border-collapse:collapse}.assumption-table th,.assumption-table td{text-align:left;padding:10px;border-bottom:1px solid var(--line)}.assumption-table th{font-size:11px;text-transform:uppercase;color:var(--muted)}.assumption-table td:last-child{text-align:right;font-weight:750}
+    .pipeline{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.stage{background:#f7f9fc;border:1px solid var(--line);border-radius:11px;padding:13px}.stage strong{font-size:22px;display:block}.stage span{color:var(--muted);font-size:12px}.quality-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.quality{border:1px solid var(--line);border-radius:11px;padding:13px}.quality-line{display:flex;justify-content:space-between;gap:12px}.quality strong{font-size:18px}.quality p{color:var(--muted);font-size:12px;margin:5px 0 0}.control-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;align-items:stretch}.flow-step{position:relative;background:#f7f9fc;border:1px solid var(--line);border-radius:11px;padding:13px}.flow-step:not(:last-child):after{content:"→";position:absolute;right:-11px;top:50%;transform:translateY(-50%);z-index:2;background:#fff;color:var(--blue);border:1px solid var(--line);width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-weight:900}.flow-step strong{display:block;font-size:13px}.flow-step span{display:block;color:var(--muted);font-size:12px;margin-top:5px}
+    .ai-note{background:#f4f0ff;border:1px solid #d9ccff;border-radius:11px;padding:14px;color:#44316d}.ai-note strong{display:block;margin-bottom:4px}.ai-note p{margin:0;font-size:13px}
+    .table-panel{padding:0;overflow:hidden}.table-head{padding:20px 20px 14px}.filters{display:grid;grid-template-columns:minmax(220px,1fr) 210px 190px auto;gap:10px}.filters input,.filters select{border:1px solid #cfd5e1;border-radius:9px;background:#fff;padding:10px;color:var(--ink)}.record-count{align-self:center;text-align:right;color:var(--muted);font-size:13px}.table-wrap{overflow:auto;border-top:1px solid var(--line);max-height:670px}table{width:100%;border-collapse:collapse;min-width:1040px}th{position:sticky;top:0;background:#f8fafc;text-align:left;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.03em;padding:11px 12px;border-bottom:1px solid var(--line);z-index:1}td{padding:12px;border-bottom:1px solid #edf0f4;vertical-align:top;font-size:13px}td small{display:block;color:var(--muted);margin-top:2px}.status-pill,.priority-pill{display:inline-block;padding:4px 8px;border-radius:999px;font-size:11px;font-weight:800}.status-pill{background:#edf4ff;color:#1849a9}.priority-pill.urgent{background:#feeceb;color:var(--red)}.priority-pill.priority{background:#fff4de;color:#8a5b00}.priority-pill.standard{background:#e8f7ef;color:var(--green)}
+    .empty{display:none;text-align:center;padding:42px;color:var(--muted)}footer{text-align:center;color:var(--muted);font-size:13px;padding:0 20px 36px}.toast{position:fixed;right:22px;bottom:22px;background:var(--navy);color:#fff;padding:11px 15px;border-radius:10px;box-shadow:var(--shadow);opacity:0;transform:translateY(10px);pointer-events:none;transition:.2s}.toast.show{opacity:1;transform:none}
+    @media(max-width:1020px){.metrics{grid-template-columns:repeat(3,1fr)}.brief,.outcome-grid{grid-template-columns:repeat(2,1fr)}.grid.wide-left{grid-template-columns:1fr}.filters{grid-template-columns:1fr 1fr}.record-count{text-align:left}.pipeline{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:720px){.shell{padding:0 15px}.header-grid{grid-template-columns:1fr}.header-actions{justify-content:flex-start}.grid,.grid.three{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}.brief,.outcome-grid{grid-template-columns:1fr}.decision{grid-template-columns:72px 1fr}.owner{grid-column:2;text-align:left}.control-flow{grid-template-columns:1fr}.flow-step:not(:last-child):after{content:"↓";right:50%;top:auto;bottom:-12px;transform:translateX(50%)}.filters{grid-template-columns:1fr}.scenario-results{grid-template-columns:1fr}.range-result{grid-column:auto}}
+    @media(max-width:430px){.metrics{grid-template-columns:1fr}.topline{align-items:flex-start;flex-direction:column}.header-grid h1{font-size:31px}.pipeline,.quality-grid{grid-template-columns:1fr}}
+    @media print{header{padding:20px 0;background:#fff!important;color:#000}.header-grid p,.topline,.header-actions,.tabs,.notice,.no-print,footer{display:none!important}main{margin:0}.shell{max-width:none}.view{display:none!important}.view.active{display:block!important}.card,.panel{box-shadow:none;break-inside:avoid}.metrics{grid-template-columns:repeat(3,1fr)}body{background:#fff}.grid{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell">
+      <div class="topline"><div class="brand">Gurjit Kaila · Portfolio Demonstration</div><div class="status-badge"><span class="status-dot"></span>Interactive toolkit · fictional data</div></div>
+      <div class="header-grid">
+        <div><div class="eyebrow">Motor finance commission remediation</div><h1>Executive Decision &amp; Assurance Toolkit</h1><p>Transforms case-level remediation data into leadership insight, scenario planning, operational oversight and accountable customer-outcome decisions.</p></div>
+        <div class="header-actions"><button class="btn secondary" id="copyBrief">Copy leadership brief</button><button class="btn primary" id="printPack">Print / save board pack</button></div>
+      </div>
+    </div>
+  </header>
+  <main class="shell">
+    <div class="notice"><strong>Important:</strong> All cases and figures are fictional. Scenario outputs use adjustable portfolio assumptions, not final FCA methodology, and must never be used to determine real eligibility or compensation.</div>
+    <nav class="tabs" aria-label="Toolkit views" role="tablist">
+      <button class="tab active" role="tab" aria-selected="true" data-view="executive">Executive view</button>
+      <button class="tab" role="tab" aria-selected="false" data-view="scenario">Scenario modeller</button>
+      <button class="tab" role="tab" aria-selected="false" data-view="operations">Operations &amp; assurance</button>
+      <button class="tab" role="tab" aria-selected="false" data-view="cases">Case review</button>
+    </nav>
+
+    <section class="view active" id="executive" role="tabpanel">
+      <div class="metrics">
+        <article class="card metric"><div class="metric-label"><span class="mini-dot"></span>Portfolio</div><div class="metric-value" id="mTotal">—</div><div class="metric-foot">fictional agreements</div></article>
+        <article class="card metric"><div class="metric-label"><span class="mini-dot" style="background:var(--green)"></span>Indicative cohort</div><div class="metric-value" id="mEligible">—</div><div class="metric-foot">human validation required</div></article>
+        <article class="card metric"><div class="metric-label"><span class="mini-dot" style="background:var(--purple)"></span>Scenario exposure</div><div class="metric-value" id="mExposure">—</div><div class="metric-foot">illustrative, not for payment</div></article>
+        <article class="card metric"><div class="metric-label"><span class="mini-dot" style="background:var(--amber)"></span>Evidence gaps</div><div class="metric-value" id="mGaps">—</div><div class="metric-foot">need investigation</div></article>
+        <article class="card metric"><div class="metric-label"><span class="mini-dot" style="background:var(--red)"></span>Urgent reviews</div><div class="metric-value" id="mUrgent">—</div><div class="metric-foot">priority customer handling</div></article>
+        <article class="card metric"><div class="metric-label"><span class="mini-dot" style="background:var(--cyan)"></span>Aged complaints</div><div class="metric-value" id="mAged">—</div><div class="metric-foot">over 180 days</div></article>
+      </div>
+
+      <div class="grid wide-left">
+        <article class="panel"><div class="section-title"><div><h2>Leadership brief</h2><p class="sub">What is happening, why it matters and what should happen next.</p></div><span class="tag">Decision-focused</span></div><div class="brief"><div class="brief-item"><strong>Position</strong><p id="briefPosition"></p></div><div class="brief-item"><strong>Customer impact</strong><p id="briefImpact"></p></div><div class="brief-item"><strong>Recommended action</strong><p id="briefAction"></p></div></div></article>
+        <article class="panel"><h2>Indicative review outcomes</h2><p class="sub">Portfolio distribution before final human decision.</p><div id="statusBars"></div></article>
+      </div>
+
+      <div class="grid">
+        <article class="panel"><div class="section-title"><div><h2>Exposure by commission arrangement</h2><p class="sub">Illustrative redress concentration identifies cohorts needing attention.</p></div><span class="tag amber">£ scenario</span></div><div id="arrangementBars"></div></article>
+        <article class="panel"><div class="section-title"><div><h2>Decisions required</h2><p class="sub">Example management actions generated from portfolio signals.</p></div><span class="tag green">Owner-led</span></div><div class="decision-list"><div class="decision"><span class="rag red">Urgent</span><div><strong>Resolve vulnerable and deceased-customer cases first</strong><p>Apply appropriate support, contact and representative controls.</p></div><div class="owner">Customer Ops<br>48 hours</div></div><div class="decision"><span class="rag amber">Control</span><div><strong>Close evidence gaps before outcome decisions</strong><p>Retrieve agreements and commission records; do not infer missing facts.</p></div><div class="owner">Data Lead<br>10 days</div></div><div class="decision"><span class="rag green">Governance</span><div><strong>Approve scenario and rule-version governance</strong><p>Record assumptions, approval, effective date and change history.</p></div><div class="owner">Programme Board<br>Next meeting</div></div></div></article>
+      </div>
+
+      <article class="panel" style="margin-top:15px"><div class="section-title"><div><h2>Consumer Duty outcome lens</h2><p class="sub">The analysis keeps customer outcomes visible alongside financial and operational measures.</p></div><span class="tag">Outcome assurance</span></div><div class="outcome-grid"><div class="outcome"><strong>Products &amp; services</strong><span>Identify commission arrangements and affected agreement cohorts.</span></div><div class="outcome"><strong>Price &amp; value</strong><span>Assess potential harm without treating an indicator as a conclusion.</span></div><div class="outcome"><strong>Consumer understanding</strong><span>Use clear communications, transparent assumptions and accessible explanations.</span></div><div class="outcome"><strong>Consumer support</strong><span>Prioritise vulnerability, ageing, representatives and additional support needs.</span></div></div></article>
+    </section>
+
+    <section class="view" id="scenario" role="tabpanel">
+      <div class="grid wide-left">
+        <article class="panel"><div class="section-title"><div><h2>Portfolio scenario controls</h2><p class="sub">Adjust planning assumptions to understand sensitivity, capacity and potential exposure.</p></div><span class="tag amber">Illustrative only</span></div><div class="controls">
+          <div class="control"><div><label for="eligibilityAdj">Indicative cohort adjustment</label><small>Stress the observed cohort up or down; not an eligibility rule.</small></div><output id="eligibilityOut">0%</output><input id="eligibilityAdj" type="range" min="-30" max="40" value="0" step="5"></div>
+          <div class="control"><div><label for="redressFactor">Average redress factor</label><small>Models uncertainty around the current illustrative output.</small></div><output id="redressOut">100%</output><input id="redressFactor" type="range" min="60" max="160" value="100" step="5"></div>
+          <div class="control"><div><label for="responseRate">Customer response / completion rate</label><small>Operational planning assumption for completed outcomes.</small></div><output id="responseOut">85%</output><input id="responseRate" type="range" min="50" max="100" value="85" step="5"></div>
+          <div class="control"><div><label for="throughput">Case-review throughput</label><small>Completed human reviews per week.</small></div><output id="throughputOut">20 / week</output><input id="throughput" type="range" min="5" max="50" value="20" step="5"></div>
+          <div class="control"><div><label for="qaRate">Quality-assurance sample</label><small>Cases selected for independent QA.</small></div><output id="qaOut">15%</output><input id="qaRate" type="range" min="5" max="40" value="15" step="5"></div>
+        </div></article>
+        <article class="panel"><h2>Modelled result</h2><p class="sub">Updates instantly as assumptions change.</p><div class="scenario-results"><div class="result range-result"><span>Illustrative exposure range</span><strong id="sRange">—</strong></div><div class="result"><span>Modelled cohort</span><strong id="sCases">—</strong></div><div class="result"><span>Expected completions</span><strong id="sCompletions">—</strong></div><div class="result"><span>Review horizon</span><strong id="sWeeks">—</strong></div><div class="result"><span>QA population</span><strong id="sQa">—</strong></div></div></article>
+      </div>
+      <div class="grid">
+        <article class="panel"><h2>Transparent assumptions</h2><p class="sub">A senior reviewer can see what drives each result.</p><table class="assumption-table"><thead><tr><th>Assumption</th><th>Current value</th></tr></thead><tbody><tr><td>Observed indicative cohort</td><td id="aBase">—</td></tr><tr><td>Observed average illustrative redress</td><td id="aAverage">—</td></tr><tr><td>Low / high exposure interval</td><td>−20% / +25%</td></tr><tr><td>Customer completion rate</td><td id="aResponse">—</td></tr><tr><td>Rule status</td><td>Configurable demonstration</td></tr></tbody></table></article>
+        <article class="panel"><h2>Management interpretation</h2><p class="sub">The model supports planning; it does not settle customer outcomes.</p><div class="decision-list"><div class="decision"><span class="rag amber">So what?</span><div><strong id="scenarioHeadline">—</strong><p id="scenarioNarrative">—</p></div><div class="owner">Reassess when<br>rules or evidence change</div></div><div class="ai-note"><strong>Control boundary</strong><p>Every assumption should have an owner, rationale, version and approval date. Real calculations require approved methodology, complete evidence, independent QA and accountable human sign-off.</p></div></div></article>
+      </div>
+    </section>
+
+    <section class="view" id="operations" role="tabpanel">
+      <div class="grid">
+        <article class="panel"><div class="section-title"><div><h2>Operational pipeline</h2><p class="sub">Current fictional workload by remediation stage.</p></div><span class="tag">Capacity view</span></div><div class="pipeline" id="pipeline"></div></article>
+        <article class="panel"><div class="section-title"><div><h2>Data quality &amp; exceptions</h2><p class="sub">Evidence confidence is reported separately from customer outcome.</p></div><span class="tag amber">Assurance</span></div><div class="quality-grid"><div class="quality"><div class="quality-line"><span>Complete key evidence</span><strong id="qEvidence">—</strong></div><p>Agreement and commission evidence available.</p></div><div class="quality"><div class="quality-line"><span>Evidence exceptions</span><strong id="qExceptions">—</strong></div><p>Missing or conflicting evidence requiring resolution.</p></div><div class="quality"><div class="quality-line"><span>Vulnerability flags</span><strong id="qVulnerable">—</strong></div><p>Require appropriate support and prioritisation.</p></div><div class="quality"><div class="quality-line"><span>Duplicate representatives</span><strong id="qDuplicate">—</strong></div><p>Authority and communication ownership need control.</p></div></div></article>
+      </div>
+      <article class="panel" style="margin-top:15px"><div class="section-title"><div><h2>Evidence-to-decision control flow</h2><p class="sub">Shows where AI may assist and where human judgement remains mandatory.</p></div><span class="tag green">Human accountable</span></div><div class="control-flow"><div class="flow-step"><strong>1 · Extract</strong><span>AI may structure dates, amounts, notes and commission indicators from approved sources.</span></div><div class="flow-step"><strong>2 · Validate</strong><span>A reviewer checks each extracted fact against source evidence and records gaps.</span></div><div class="flow-step"><strong>3 · Assess</strong><span>Approved rules, exceptions and Consumer Duty considerations are applied.</span></div><div class="flow-step"><strong>4 · Assure</strong><span>QA, rationale, approval and an audit trail precede any final customer outcome.</span></div></div></article>
+      <div class="grid">
+        <article class="panel"><h2>AI review assurance</h2><p class="sub">Designed to challenge confident but unsupported outputs.</p><div class="ai-note"><strong>Prepared demonstration—not a live AI connection</strong><p>The toolkit demonstrates where prompts and AI-assisted extraction could support review. It does not call ChatGPT, Claude, Gemini or any customer system, and it never makes a final decision.</p></div><div class="decision-list" style="margin-top:10px"><div class="decision"><span class="rag green">Check 1</span><div><strong>Evidence citation</strong><p>Can each extracted fact be traced to a source document or note?</p></div><div class="owner">Reviewer</div></div><div class="decision"><span class="rag amber">Check 2</span><div><strong>Missing-data challenge</strong><p>Has absence of evidence been wrongly treated as evidence of absence?</p></div><div class="owner">QA</div></div><div class="decision"><span class="rag red">Check 3</span><div><strong>Unsupported conclusion</strong><p>Has the model moved from an indicator to liability or eligibility without authority?</p></div><div class="owner">Escalate</div></div></div></article>
+        <article class="panel"><h2>Programme oversight</h2><p class="sub">Example indicators for a weekly governance forum.</p><div id="ageBars"></div><div class="decision-list" style="margin-top:16px"><div class="decision"><span class="rag amber">Trend</span><div><strong>Complaint ageing requires active ownership</strong><p id="ageNarrative">—</p></div><div class="owner">Weekly MI</div></div></div></article>
+      </div>
+    </section>
+
+    <section class="view" id="cases" role="tabpanel">
+      <article class="panel table-panel"><div class="table-head"><div class="section-title"><div><h2>Human-review queue</h2><p class="sub">Search and filter case indicators. Final outcomes remain outside this demonstration.</p></div><span class="tag">100% fictional</span></div><div class="filters"><input id="caseSearch" type="search" placeholder="Search case, product, broker or arrangement" aria-label="Search cases"><select id="statusFilter" aria-label="Filter by status"><option value="All">All review outcomes</option><option>Indicatively eligible</option><option>Further investigation</option><option>No redress indicator</option><option>Excluded / no redress indicator</option></select><select id="priorityFilter" aria-label="Filter by priority"><option value="All">All priorities</option><option>Urgent</option><option>Priority</option><option>Standard</option></select><div class="record-count" id="recordCount">—</div></div></div><div class="table-wrap"><table><thead><tr><th>Case</th><th>Indicative status</th><th>Priority</th><th>Arrangement</th><th>Commission</th><th>Illustrative redress</th><th>Evidence gaps</th></tr></thead><tbody id="caseRows">__CASE_ROWS__</tbody></table><div class="empty" id="emptyState">No cases match the selected filters.</div></div></article>
+    </section>
+  </main>
+  <footer>Personal portfolio project built with AI assistance · Fictional data only · No employer, customer or confidential information · Final decisions require accountable human review</footer>
+  <div class="toast" id="toast" role="status" aria-live="polite">Leadership brief copied</div>
+
+  <script>
+    const cases = __CASE_DATA__;
+    const money = value => new Intl.NumberFormat('en-GB',{style:'currency',currency:'GBP',maximumFractionDigits:0}).format(value || 0);
+    const count = (field,value) => cases.filter(c => c[field] === value).length;
+    const sum = (items,field) => items.reduce((total,item) => total + Number(item[field] || 0),0);
+    const escapeText = value => String(value).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[ch]));
+    const groupBy = (field,amountField=null) => cases.reduce((acc,c)=>{const key=c[field] || 'Not recorded';acc[key]=(acc[key]||0)+(amountField?Number(c[amountField]||0):1);return acc},{});
+    const eligible = cases.filter(c=>c.indicative_status==='Indicatively eligible');
+    const baseExposure = sum(eligible,'illustrative_total_redress');
+    const evidenceGaps = cases.filter(c=>c.evidence_gaps!=='None identified').length;
+    const urgent = count('review_priority','Urgent');
+    const aged = cases.filter(c=>Number(c.complaint_age_days)>180).length;
+    const vulnerable = cases.filter(c=>c.customer_vulnerability).length;
+
+    function bar(label,value,max,klass='',displayValue=value){return `<div class="bar-row"><div class="bar-label"><span>${escapeText(label)}</span><span>${escapeText(displayValue)}</span></div><div class="bar-track"><div class="bar-fill ${klass}" style="width:${max?Math.max(2,value/max*100):0}%"></div></div></div>`}
+    function populateExecutive(){
+      document.querySelector('#mTotal').textContent=cases.length;
+      document.querySelector('#mEligible').textContent=eligible.length;
+      document.querySelector('#mExposure').textContent=money(baseExposure);
+      document.querySelector('#mGaps').textContent=evidenceGaps;
+      document.querySelector('#mUrgent').textContent=urgent;
+      document.querySelector('#mAged').textContent=aged;
+      document.querySelector('#briefPosition').textContent=`${eligible.length} cases have an indicative eligibility signal and ${evidenceGaps} require evidence investigation across the ${cases.length}-case fictional portfolio.`;
+      document.querySelector('#briefImpact').textContent=`${urgent} cases are marked urgent, including ${vulnerable} vulnerability indicators. Delay or weak evidence handling could create inconsistent customer outcomes.`;
+      document.querySelector('#briefAction').textContent='Prioritise urgent cases, close evidence gaps, approve the scenario assumptions and retain maker-checker QA before any final decision.';
+      const statuses=groupBy('indicative_status'); const maxStatus=Math.max(...Object.values(statuses));
+      const statusClass={'Indicatively eligible':'green','Further investigation':'amber','No redress indicator':'','Excluded / no redress indicator':'red'};
+      document.querySelector('#statusBars').innerHTML=Object.entries(statuses).map(([k,v])=>bar(k,v,maxStatus,statusClass[k]||'',`${v} cases`)).join('');
+      const arrangements=eligible.reduce((acc,c)=>{acc[c.arrangement_type]=(acc[c.arrangement_type]||0)+Number(c.illustrative_total_redress||0);return acc},{}); const maxA=Math.max(...Object.values(arrangements),1);
+      document.querySelector('#arrangementBars').innerHTML=Object.entries(arrangements).sort((a,b)=>b[1]-a[1]).map(([k,v])=>bar(k,v,maxA,'purple',money(v))).join('');
+    }
+
+    function updateScenario(){
+      const adjust=Number(document.querySelector('#eligibilityAdj').value), factor=Number(document.querySelector('#redressFactor').value), response=Number(document.querySelector('#responseRate').value), throughput=Number(document.querySelector('#throughput').value), qa=Number(document.querySelector('#qaRate').value);
+      const cohort=Math.max(0,Math.round(eligible.length*(1+adjust/100))); const average=eligible.length?baseExposure/eligible.length:0; const central=cohort*average*(factor/100); const completions=Math.round(cohort*response/100); const weeks=Math.max(1,Math.ceil(cases.length/throughput)); const qaCases=Math.ceil(cases.length*qa/100);
+      document.querySelector('#eligibilityOut').textContent=`${adjust>0?'+':''}${adjust}%`;document.querySelector('#redressOut').textContent=`${factor}%`;document.querySelector('#responseOut').textContent=`${response}%`;document.querySelector('#throughputOut').textContent=`${throughput} / week`;document.querySelector('#qaOut').textContent=`${qa}%`;
+      document.querySelector('#sRange').textContent=`${money(central*.8)} – ${money(central*1.25)}`;document.querySelector('#sCases').textContent=cohort;document.querySelector('#sCompletions').textContent=completions;document.querySelector('#sWeeks').textContent=`${weeks} weeks`;document.querySelector('#sQa').textContent=qaCases;
+      document.querySelector('#aBase').textContent=`${eligible.length} cases`;document.querySelector('#aAverage').textContent=money(average);document.querySelector('#aResponse').textContent=`${response}%`;
+      document.querySelector('#scenarioHeadline').textContent=`Current assumptions produce a central planning exposure of ${money(central)}.`;
+      document.querySelector('#scenarioNarrative').textContent=`At ${throughput} reviews per week, the full fictional population would take about ${weeks} weeks to review, with ${qaCases} cases selected for QA.`;
+    }
+
+    function populateOperations(){
+      const stages=groupBy('remediation_status'); const stageOrder=['Evidence gathering','Assessment','QA','Awaiting rules'];
+      document.querySelector('#pipeline').innerHTML=stageOrder.map(k=>`<div class="stage"><strong>${stages[k]||0}</strong><span>${escapeText(k)}</span></div>`).join('');
+      const complete=cases.filter(c=>c.key_evidence_complete).length, duplicate=cases.filter(c=>c.duplicate_representatives).length;
+      document.querySelector('#qEvidence').textContent=`${complete}%`;document.querySelector('#qExceptions').textContent=evidenceGaps;document.querySelector('#qVulnerable').textContent=vulnerable;document.querySelector('#qDuplicate').textContent=duplicate;
+      const ageGroups={'0–90 days':0,'91–180 days':0,'181–270 days':0,'271+ days':0};cases.forEach(c=>{const d=Number(c.complaint_age_days);ageGroups[d<=90?'0–90 days':d<=180?'91–180 days':d<=270?'181–270 days':'271+ days']++});const ageMax=Math.max(...Object.values(ageGroups));
+      document.querySelector('#ageBars').innerHTML=Object.entries(ageGroups).map(([k,v],i)=>bar(k,v,ageMax,i>1?'amber':'',`${v} cases`)).join('');
+      document.querySelector('#ageNarrative').textContent=`${aged} complaints are over 180 days old. Older cases should have a named owner, next action and escalation date.`;
+    }
+
+    function filterCases(){
+      const search=document.querySelector('#caseSearch').value.trim().toLowerCase(), status=document.querySelector('#statusFilter').value, priority=document.querySelector('#priorityFilter').value;let visible=0;
+      document.querySelectorAll('#caseRows tr').forEach(row=>{const show=(!search||row.dataset.search.includes(search))&&(status==='All'||row.dataset.status===status)&&(priority==='All'||row.dataset.priority===priority);row.hidden=!show;if(show)visible++});
+      document.querySelector('#recordCount').textContent=`Showing ${visible} of ${cases.length} cases`;document.querySelector('#emptyState').style.display=visible?'none':'block';
+    }
+
+    document.querySelectorAll('.tab').forEach(tab=>tab.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.setAttribute('aria-selected','false')});document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));tab.classList.add('active');tab.setAttribute('aria-selected','true');document.querySelector(`#${tab.dataset.view}`).classList.add('active')}));
+    ['eligibilityAdj','redressFactor','responseRate','throughput','qaRate'].forEach(id=>document.querySelector(`#${id}`).addEventListener('input',updateScenario));
+    ['caseSearch','statusFilter','priorityFilter'].forEach(id=>document.querySelector(`#${id}`).addEventListener(id==='caseSearch'?'input':'change',filterCases));
+    document.querySelector('#printPack').addEventListener('click',()=>window.print());
+    document.querySelector('#copyBrief').addEventListener('click',async()=>{const text=`Motor Finance Redress — Leadership Brief\n\nPosition: ${document.querySelector('#briefPosition').textContent}\n\nCustomer impact: ${document.querySelector('#briefImpact').textContent}\n\nRecommended action: ${document.querySelector('#briefAction').textContent}\n\nAll figures are fictional and illustrative.`;try{await navigator.clipboard.writeText(text);const toast=document.querySelector('#toast');toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800)}catch(e){window.prompt('Copy leadership brief:',text)}});
+    populateExecutive();populateOperations();updateScenario();filterCases();
+  </script>
+</body>
+</html>
