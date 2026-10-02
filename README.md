@@ -10,12 +10,13 @@ A business-analysis portfolio demonstration showing how structured data, transpa
 
 **[Open the Motor Finance Redress Executive Decision Toolkit](https://gurj86.github.io/motor-finance-redress-dashboard/)**
 
-The live page opens directly into the working toolkit. Use the four tabs to explore:
+The live page opens directly into the working toolkit. Use the five tabs to explore:
 
 1. **Executive view** — leadership KPIs, key trends, Consumer Duty outcomes and decisions required.
 2. **Scenario modeller** — adjustable assumptions for exposure, completion rates, capacity and QA.
 3. **Operations & assurance** — pipeline, ageing, data quality and AI/human control points.
 4. **Case review** — searchable and filterable fictional case-level indicators.
+5. **AI Case Review** — editable fictional cases with a transparent rule-based assurance check that challenges evidence gaps, unsupported assumptions, commission classification and reviewer rationale before human sign-off.
 
 > All agreements, customers, firms and monetary figures are fictional. The calculator is illustrative and must not be used for real compensation decisions.
 
@@ -51,6 +52,8 @@ Regulatory assumptions in this demonstration are versioned to **17 September 202
 - Stress-testing exposure and delivery capacity through transparent scenarios
 - Presenting decisions, owners, actions and control implications
 - Challenging unsupported AI conclusions and retaining human accountability
+- Running a transparent rule-based AI-style case assurance review against fictional evidence and reviewer rationale
+- Linking potential review gaps to relevant public FCA scheme or Handbook references where appropriate
 
 ## Toolkit contents
 
@@ -67,7 +70,8 @@ The demonstration analyses 100 fictional motor finance agreements and displays:
 - an executive leadership brief with clear “so what?” interpretation;
 - a configurable scenario and capacity modeller;
 - a Consumer Duty outcome lens and decision register; and
-- a print-ready board-pack view.
+- a print-ready board-pack view; and
+- an interactive AI Case Review prototype where users can edit fictional agreement evidence and test how defined assurance flags change.
 
 ## Business analyst approach
 
@@ -85,6 +89,8 @@ The scenario modeller deliberately separates planning assumptions from regulator
 I designed the remediation use case, evidence fields, review questions, exception logic, management information and governance outputs using my Consumer Duty and financial-services remediation experience. I used AI to help translate the design into a working technical demonstration, then tested and challenged the outputs and controls.
 
 The operating principle is **AI-assisted, evidence-led and human-accountable**.
+
+The AI Case Review is deliberately a **rule-based prototype rather than a live external AI model**. Users can vary the fictional wording and evidence, but the prototype looks for configured patterns and evidence gaps rather than generating an unrestricted AI opinion. It does not determine eligibility, liability or compensation.
 
 ## Quick start
 
