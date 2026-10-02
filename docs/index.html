@@ -35,6 +35,31 @@
     @media(max-width:720px){.shell{padding:0 15px}.header-grid{grid-template-columns:1fr}.header-actions{justify-content:flex-start}.grid,.grid.three{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}.brief,.outcome-grid{grid-template-columns:1fr}.decision{grid-template-columns:72px 1fr}.owner{grid-column:2;text-align:left}.control-flow{grid-template-columns:1fr}.flow-step:not(:last-child):after{content:"↓";right:50%;top:auto;bottom:-12px;transform:translateX(50%)}.filters{grid-template-columns:1fr}.scenario-results{grid-template-columns:1fr}.range-result{grid-column:auto}}
     @media(max-width:430px){.metrics{grid-template-columns:1fr}.topline{align-items:flex-start;flex-direction:column}.header-grid h1{font-size:31px}.pipeline,.quality-grid{grid-template-columns:1fr}}
     @media print{header{padding:20px 0;background:#fff!important;color:#000}.header-grid p,.topline,.header-actions,.tabs,.notice,.no-print,footer{display:none!important}main{margin:0}.shell{max-width:none}.view{display:none!important}.view.active{display:block!important}.card,.panel{box-shadow:none;break-inside:avoid}.metrics{grid-template-columns:repeat(3,1fr)}body{background:#fff}.grid{grid-template-columns:1fr 1fr}}
+  
+    .ai-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+    .ai-field{display:flex;flex-direction:column;gap:6px}
+    .ai-field.full{grid-column:1/-1}
+    .ai-field label{font-size:12px;font-weight:800;color:var(--navy);letter-spacing:.02em}
+    .ai-field input,.ai-field select,.ai-field textarea{width:100%;border:1px solid #cfd8e6;border-radius:10px;background:#fff;color:var(--ink);padding:11px 12px;outline:none}
+    .ai-field textarea{min-height:112px;resize:vertical;line-height:1.5}
+    .ai-field input:focus,.ai-field select:focus,.ai-field textarea:focus{border-color:#86a7ed;box-shadow:0 0 0 3px rgba(37,99,235,.08)}
+    .ai-actions{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap;margin-top:14px}
+    .ai-results{margin-top:15px;display:none}
+    .ai-results.show{display:block}
+    .ai-result-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:12px}
+    .ai-result-head h2{margin:0}
+    .assurance-status{display:inline-flex;align-items:center;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:800;background:#fff4e5;color:#8a4b00;border:1px solid #f1d3a5}
+    .finding-card{border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:11px;padding:14px 15px;margin:9px 0;background:#fff}
+    .finding-card.high{border-left-color:var(--red)}
+    .finding-card.info{border-left-color:var(--blue)}
+    .finding-card strong{display:block;margin-bottom:4px}
+    .finding-card p{margin:0;color:#475467}
+    .finding-card a{display:inline-block;margin-top:8px;font-size:12px;font-weight:800;color:var(--blue);text-decoration:none}
+    .finding-card a:hover{text-decoration:underline}
+    .human-boundary{margin-top:14px;background:#f7f9fc;border:1px solid var(--line);border-radius:12px;padding:14px}
+    .human-boundary strong{display:block;margin-bottom:4px}
+    @media(max-width:760px){.ai-form-grid{grid-template-columns:1fr}.ai-field.full{grid-column:auto}}
+
   </style>
 </head>
 <body>
@@ -54,6 +79,7 @@
       <button class="tab" role="tab" aria-selected="false" data-view="scenario">Scenario modeller</button>
       <button class="tab" role="tab" aria-selected="false" data-view="operations">Operations &amp; assurance</button>
       <button class="tab" role="tab" aria-selected="false" data-view="cases">Case review</button>
+      <button class="tab" role="tab" aria-selected="false" data-view="ai-review">AI Case Review</button>
     </nav>
 
     <section class="view active" id="executive" role="tabpanel">
@@ -106,6 +132,73 @@
         <article class="panel"><h2>AI review assurance</h2><p class="sub">Designed to challenge confident but unsupported outputs.</p><div class="ai-note"><strong>Prepared demonstration—not a live AI connection</strong><p>The toolkit demonstrates where prompts and AI-assisted extraction could support review. It does not call ChatGPT, Claude, Gemini or any customer system, and it never makes a final decision.</p></div><div class="decision-list" style="margin-top:10px"><div class="decision"><span class="rag green">Check 1</span><div><strong>Evidence citation</strong><p>Can each extracted fact be traced to a source document or note?</p></div><div class="owner">Reviewer</div></div><div class="decision"><span class="rag amber">Check 2</span><div><strong>Missing-data challenge</strong><p>Has absence of evidence been wrongly treated as evidence of absence?</p></div><div class="owner">QA</div></div><div class="decision"><span class="rag red">Check 3</span><div><strong>Unsupported conclusion</strong><p>Has the model moved from an indicator to liability or eligibility without authority?</p></div><div class="owner">Escalate</div></div></div></article>
         <article class="panel"><h2>Programme oversight</h2><p class="sub">Example indicators for a weekly governance forum.</p><div id="ageBars"></div><div class="decision-list" style="margin-top:16px"><div class="decision"><span class="rag amber">Trend</span><div><strong>Complaint ageing requires active ownership</strong><p id="ageNarrative">—</p></div><div class="owner">Weekly MI</div></div></div></article>
       </div>
+    </section>
+
+
+    <section class="view" id="ai-review" role="tabpanel">
+      <article class="panel">
+        <div class="section-title">
+          <div>
+            <div class="eyebrow" style="color:#61708a">Fictional reviewer workflow</div>
+            <h2>Motor Finance AI Case Review</h2>
+            <p class="sub">Enter a fictional motor-finance commission case and reviewer rationale. The assurance layer checks for defined evidence gaps, unsupported assumptions and regulatory points that may need human investigation.</p>
+          </div>
+          <span class="tag">Rule-based prototype · human review required</span>
+        </div>
+
+        <div class="notice" style="margin-top:14px;box-shadow:none">
+          <strong>Prototype boundary:</strong> This is not a live external AI model and it does not decide eligibility, liability or compensation. It uses transparent rule-based logic to surface possible review gaps. Regulatory applicability depends on the agreement date, evidence and current FCA scheme status.
+        </div>
+
+        <div class="ai-form-grid">
+          <div class="ai-field">
+            <label for="aiProduct">Agreement type</label>
+            <select id="aiProduct"><option>PCP</option><option>Hire Purchase</option><option>Conditional Sale</option><option>PCH / Leasing</option></select>
+          </div>
+          <div class="ai-field">
+            <label for="aiArrangement">Commission arrangement</label>
+            <select id="aiArrangement"><option>DCA</option><option>High commission</option><option>Contractual tie</option><option>No flagged arrangement</option><option>Unknown / evidence incomplete</option></select>
+          </div>
+          <div class="ai-field">
+            <label for="aiDate">Agreement date</label>
+            <input id="aiDate" type="date" value="2018-06-15">
+          </div>
+          <div class="ai-field">
+            <label for="aiCommission">Commission amount / evidence</label>
+            <input id="aiCommission" type="text" value="Commission record shows £1,240 paid to the broker.">
+          </div>
+          <div class="ai-field full">
+            <label for="aiEvidence">Evidence available</label>
+            <textarea id="aiEvidence">Finance agreement and customer file are available. Broker commission record is available. The file does not clearly show what commission information was disclosed to the customer before the agreement.</textarea>
+          </div>
+          <div class="ai-field full">
+            <label for="aiComplaint">Complaint / customer evidence</label>
+            <textarea id="aiComplaint">Customer says they were not told that the dealer would receive commission and believed the dealer was recommending the most suitable finance option.</textarea>
+          </div>
+          <div class="ai-field full">
+            <label for="aiRationale">Reviewer rationale</label>
+            <textarea id="aiRationale">The agreement has been classified as DCA and the commission payment is recorded. The customer signed the finance agreement, so I have treated the case as sufficiently evidenced and eligible for the illustrative redress cohort.</textarea>
+          </div>
+        </div>
+
+        <div class="ai-actions">
+          <button class="btn" id="loadAiExample" type="button">Load fictional example</button>
+          <button class="btn primary" id="runAiReview" type="button" style="background:var(--navy);color:#fff;border-color:var(--navy)">Run AI Assurance Check</button>
+        </div>
+      </article>
+
+      <article class="panel ai-results" id="aiResults">
+        <div class="ai-result-head">
+          <div><div class="eyebrow" style="color:#61708a">AI assurance result</div><h2 id="aiOutcome">Further investigation</h2></div>
+          <span class="assurance-status" id="aiFlagCount">0 flags</span>
+        </div>
+        <p class="sub" id="aiSummary">The check will compare the reviewer rationale with the fictional case evidence and surface defined review gaps.</p>
+        <div id="aiFindings"></div>
+        <div class="human-boundary">
+          <strong>Human reviewer decision</strong>
+          <span>The findings are prompts for investigation, not findings of breach. A reviewer should validate the source evidence, confirm the applicable FCA rules and scheme status, and make the final decision.</span>
+        </div>
+      </article>
     </section>
 
     <section class="view" id="cases" role="tabpanel">
@@ -873,11 +966,119 @@
       document.querySelector('#recordCount').textContent=`Showing ${visible} of ${cases.length} cases`;document.querySelector('#emptyState').style.display=visible?'none':'block';
     }
 
+
+    function esc(s){return String(s||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+    function runMotorAiReview(){
+      const product=document.querySelector('#aiProduct').value;
+      const arrangement=document.querySelector('#aiArrangement').value;
+      const date=document.querySelector('#aiDate').value;
+      const commission=document.querySelector('#aiCommission').value.trim();
+      const evidence=document.querySelector('#aiEvidence').value.trim();
+      const complaint=document.querySelector('#aiComplaint').value.trim();
+      const rationale=document.querySelector('#aiRationale').value.trim();
+      const all=(commission+' '+evidence+' '+complaint+' '+rationale).toLowerCase();
+      const ev=(commission+' '+evidence).toLowerCase();
+      const rat=rationale.toLowerCase();
+      const flags=[];
+      const add=(severity,title,body,label,url)=>flags.push({severity,title,body,label,url});
+
+      if(!commission || /unknown|missing|not available|not found|incomplete/.test(ev)){
+        add('high','Commission evidence may be incomplete',
+          'The entered evidence does not clearly establish the commission amount or supporting commission record. The classification should not be treated as settled until the underlying evidence is validated.',
+          'FCA scheme scope / commission evidence','https://handbook.fca.org.uk/handbook/conred5');
+      }
+
+      if(arrangement==='DCA' && !/interest|rate|discretion|dealer could|broker could|increase|decrease|scaled|difference in charges/.test(ev)){
+        add('high','DCA classification needs stronger evidence',
+          'The case is labelled as a discretionary commission arrangement, but the evidence entered does not explain how the broker or dealer had discretion over the customer rate or how commission varied with that rate.',
+          'CONC 4.5.7 — examples of DCA','https://handbook.fca.org.uk/handbook/conc4/conc4s5');
+      }
+
+      if(/signed|customer agreed|accepted/.test(rat) && !/disclos|commission|arrangement|broker|dealer|evidence/.test(rat.replace(/signed|customer agreed|accepted/g,''))){
+        add('high','Customer signature is carrying too much weight',
+          'Signing the finance agreement does not by itself demonstrate that relevant commission information was adequately disclosed or that the commission assessment is complete.',
+          'CONRED 5 — motor finance commission redress scheme','https://handbook.fca.org.uk/handbook/conred5');
+      }
+
+      if(/not told|not disclosed|no disclosure|wasn't told|was not told/.test((complaint+' '+evidence).toLowerCase()) && !/disclos/.test(rat)){
+        add('high','Disclosure evidence is not addressed in the rationale',
+          'The fictional customer evidence raises a commission-disclosure issue, but the reviewer rationale does not explain what was disclosed, what evidence supports that conclusion, or how it affected the outcome.',
+          'CONRED 5.1.16 — subject matter of scheme','https://handbook.fca.org.uk/handbook/conred5');
+      }
+
+      if(arrangement==='No flagged arrangement' && /commission|broker|dealer/.test(all) && !/why|because|evidence shows|record confirms|no discretion|not tied/.test(rat)){
+        add('high','No-redress conclusion may be under-evidenced',
+          'The rationale reaches a no-indicator position without clearly explaining the evidence supporting the commission-arrangement classification. A human reviewer should check that missing or ambiguous evidence has not been treated as evidence of absence.',
+          'PS26/3 — Motor finance consumer redress scheme','https://www.fca.org.uk/publications/policy-statements/ps26-3-motor-finance-consumer-redress-scheme');
+      }
+
+      if(/unknown|unclear|conflict|conflicting|missing|incomplete|not available/.test(evidence.toLowerCase()) && /eligible|exclude|no redress|no indicator|final/.test(rat)){
+        add('high','Outcome appears firmer than the evidence',
+          'The evidence notes contain uncertainty or missing information, while the rationale reaches a relatively firm outcome. The unresolved evidence should be addressed before final human sign-off.',
+          'FCA motor finance redress scheme','https://www.fca.org.uk/publications/policy-statements/ps26-3-motor-finance-consumer-redress-scheme');
+      }
+
+      if(date){
+        const yr=Number(date.slice(0,4));
+        if(yr>=2021 && /not told|not disclosed|no disclosure/.test((complaint+' '+evidence).toLowerCase())){
+          add('info','Post-2021 commission disclosure rule may be relevant',
+            'For agreements entered into from 28 January 2021, the reviewer should check the specific commission disclosure requirements and the facts of the case rather than relying on a generic disclosure assumption.',
+            'CONC 4.5.3 / 4.5.3A — commission disclosure','https://handbook.fca.org.uk/handbook/conc4/conc4s5');
+        }
+        if(yr<2014){
+          add('info','Agreement date requires the correct scheme chapter',
+            'This fictional agreement predates April 2014. The reviewer should check the applicable pre-2014 motor-finance commission redress chapter rather than assuming the later-period rules apply.',
+            'CONRED 6 — 2007–2014 scheme chapter','https://handbook.fca.org.uk/handbook/conred6');
+        }
+      }
+
+      if(product==='PCH / Leasing'){
+        add('info','Leasing agreement requires separate scope confirmation',
+          'The product is recorded as PCH / leasing. The reviewer should confirm whether the agreement falls within the applicable scheme or complaint-handling route before applying a redress outcome.',
+          'FCA motor finance complaints / scheme policy','https://www.fca.org.uk/publications/policy-statements/ps26-3-motor-finance-consumer-redress-scheme');
+      }
+
+      if(!/customer|complaint|disclos|commission|evidence|arrangement/.test(rat)){
+        add('info','Rationale may be too process-led',
+          'The rationale does not clearly connect the case evidence, commission arrangement and customer circumstances to the proposed outcome.',
+          'FCA motor finance redress scheme','https://www.fca.org.uk/publications/policy-statements/ps26-3-motor-finance-consumer-redress-scheme');
+      }
+
+      if(flags.length===0){
+        add('info','No defined rule-based gap triggered',
+          'This prototype did not detect one of its configured evidence-gap patterns. That is not confirmation that the assessment is correct; the case still requires human review against the approved methodology and source evidence.',
+          'FCA motor finance redress scheme','https://www.fca.org.uk/publications/policy-statements/ps26-3-motor-finance-consumer-redress-scheme');
+      }
+
+      const high=flags.filter(x=>x.severity==='high').length;
+      document.querySelector('#aiOutcome').textContent=high?'Further investigation':'Human validation required';
+      document.querySelector('#aiFlagCount').textContent=flags.length+' '+(flags.length===1?'flag':'flags');
+      document.querySelector('#aiSummary').textContent=high
+        ? 'The rule-based assurance check found evidence or rationale points that should be resolved before a final customer outcome is reached.'
+        : 'No high-severity configured pattern was triggered, but the case still requires human validation against source evidence and the approved methodology.';
+      document.querySelector('#aiFindings').innerHTML=flags.map(f=>'<div class="finding-card '+esc(f.severity)+'"><strong>'+esc(f.title)+'</strong><p>'+esc(f.body)+'</p><a href="'+esc(f.url)+'" target="_blank" rel="noreferrer">View FCA reference: '+esc(f.label)+' →</a></div>').join('');
+      document.querySelector('#aiResults').classList.add('show');
+      document.querySelector('#aiResults').scrollIntoView({behavior:'smooth',block:'start'});
+    }
+
+    function loadMotorAiExample(){
+      document.querySelector('#aiProduct').value='PCP';
+      document.querySelector('#aiArrangement').value='DCA';
+      document.querySelector('#aiDate').value='2018-06-15';
+      document.querySelector('#aiCommission').value='Commission record shows £1,240 paid to the broker.';
+      document.querySelector('#aiEvidence').value='Finance agreement and customer file are available. Broker commission record is available. The file does not clearly show what commission information was disclosed to the customer before the agreement.';
+      document.querySelector('#aiComplaint').value='Customer says they were not told that the dealer would receive commission and believed the dealer was recommending the most suitable finance option.';
+      document.querySelector('#aiRationale').value='The agreement has been classified as DCA and the commission payment is recorded. The customer signed the finance agreement, so I have treated the case as sufficiently evidenced and eligible for the illustrative redress cohort.';
+      document.querySelector('#aiResults').classList.remove('show');
+    }
+
     document.querySelectorAll('.tab').forEach(tab=>tab.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.setAttribute('aria-selected','false')});document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));tab.classList.add('active');tab.setAttribute('aria-selected','true');document.querySelector(`#${tab.dataset.view}`).classList.add('active')}));
     ['eligibilityAdj','redressFactor','responseRate','throughput','qaRate'].forEach(id=>document.querySelector(`#${id}`).addEventListener('input',updateScenario));
     ['caseSearch','statusFilter','priorityFilter'].forEach(id=>document.querySelector(`#${id}`).addEventListener(id==='caseSearch'?'input':'change',filterCases));
     document.querySelector('#printPack').addEventListener('click',()=>window.print());
     document.querySelector('#copyBrief').addEventListener('click',async()=>{const text=`Motor Finance Redress — Leadership Brief\n\nPosition: ${document.querySelector('#briefPosition').textContent}\n\nCustomer impact: ${document.querySelector('#briefImpact').textContent}\n\nRecommended action: ${document.querySelector('#briefAction').textContent}\n\nAll figures are fictional and illustrative.`;try{await navigator.clipboard.writeText(text);const toast=document.querySelector('#toast');toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800)}catch(e){window.prompt('Copy leadership brief:',text)}});
+    document.querySelector('#runAiReview').addEventListener('click',runMotorAiReview);
+    document.querySelector('#loadAiExample').addEventListener('click',loadMotorAiExample);
     populateExecutive();populateOperations();updateScenario();filterCases();
   </script>
 </body>
